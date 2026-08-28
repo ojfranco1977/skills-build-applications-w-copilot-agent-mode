@@ -7,7 +7,7 @@ function Activities() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetchItems('/api/activities/').then(setActivities).then(() => setStatus('ready')).catch((reason) => {
+    fetchItems('-8000.app.github.dev/api/activities/').then(setActivities).then(() => setStatus('ready')).catch((reason) => {
       setError(reason.message);
       setStatus('error');
     });

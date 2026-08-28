@@ -7,7 +7,7 @@ function Teams() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetchItems('/api/teams/').then(setTeams).then(() => setStatus('ready')).catch((reason) => {
+    fetchItems('-8000.app.github.dev/api/teams/').then(setTeams).then(() => setStatus('ready')).catch((reason) => {
       setError(reason.message);
       setStatus('error');
     });

@@ -7,7 +7,7 @@ function Users() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetchItems('/api/users/').then(setUsers).then(() => setStatus('ready')).catch((reason) => {
+    fetchItems('-8000.app.github.dev/api/users/').then(setUsers).then(() => setStatus('ready')).catch((reason) => {
       setError(reason.message);
       setStatus('error');
     });
