@@ -7,7 +7,7 @@ function Workouts() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetchItems('workouts').then(setWorkouts).then(() => setStatus('ready')).catch((reason) => {
+    fetchItems('/api/workouts/').then(setWorkouts).then(() => setStatus('ready')).catch((reason) => {
       setError(reason.message);
       setStatus('error');
     });

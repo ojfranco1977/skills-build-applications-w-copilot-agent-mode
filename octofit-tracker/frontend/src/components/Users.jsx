@@ -7,7 +7,7 @@ function Users() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetchItems('users').then(setUsers).then(() => setStatus('ready')).catch((reason) => {
+    fetchItems('/api/users/').then(setUsers).then(() => setStatus('ready')).catch((reason) => {
       setError(reason.message);
       setStatus('error');
     });
