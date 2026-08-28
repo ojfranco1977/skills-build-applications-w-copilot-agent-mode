@@ -7,7 +7,7 @@ function Leaderboard() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetchItems('-8000.app.github.devleaderboard/').then(setLeaders).then(() => setStatus('ready')).catch((reason) => {
+    fetchItems('-8000.app.github.dev/api/leaderboard/').then(setLeaders).then(() => setStatus('ready')).catch((reason) => {
       setError(reason.message);
       setStatus('error');
     });
